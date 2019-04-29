@@ -1,7 +1,9 @@
-<h1> These are all my documents? </h1
+<h1> These are all my documents? </h1>
 
   <% @documents.each do |document|%>
     <h2> <%= link_to document.title, document %> </h2>
     <p> <%= time_ago_in_words(document.created_at)%> </p>
     <p> <%= truncate(document.content, length: 20)%></p>
   <% end %>
+
+<h3> <%= link_to "Create New Document", new_document_path %> </h3>
