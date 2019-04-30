@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>FileCabinet</title>
+    <title>FileCabinet | All About Horcruxes</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 
@@ -10,6 +10,20 @@
   </head>
 
   <body>
+    <header>
+      <div class="header_inner">
+        <h1> <%= link_to "FileCabinet", root_path %>
+          <nav>
+            <% if user_signed_in?  %>
+              <%= link_to "Create New Document", new_document_path %> |
+              <%= link_to "Sign Out", destroy_user_session_path, method: :delete %>
+            <% else %>
+              <%= link_to "Log In", new_user_session_path %>
+            <% end %>
+          </nav>
+        </h1>
+      </div>
+    </header>
     <p class="notice"><%= notice %></p>
     <p class="alert"><%= alert %></p>
     <%= yield %>
