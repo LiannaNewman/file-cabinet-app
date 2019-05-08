@@ -1,6 +1,10 @@
-<h1> <%= @document.title %> </h1>
-<p> <%= @document.content %> </p>
-
+<div class="wrapper_with_padding">
+  <div id="doc_show">
+      <br />
+      <h1 class="title"> <%= @document.title %> </h1>
+      <p> <%= @document.content %> </p>
+  </div>
+</div>
 <%= link_to "All Documents", documents_path %>
 <%= link_to "Edit Document", edit_document_path(@document) %>
 <%= link_to "Trash Document",

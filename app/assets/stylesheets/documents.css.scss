@@ -12,7 +12,7 @@
    position: relative;
    text-align: center;
      .title {
-       font-style: bold;
+       font-weight: bold;
        color: white;
        margin: 0;
        left: 4.5%;
@@ -43,30 +43,30 @@
 // DOCS SHOW
 
 #doc_show {
-  .title {
-   font-style: bold;
-   color: #78594B;
-   font-size: 2.0rem;
-   margin-bottom: 1.25rem;
-   padding-bottom: 1rem;
-   border-bottom: 1.0px solid rgba(82,158,204, 0.2);
-   text-align: center;
-  }
-  p {
-   font-size: 1.0rem;
-   line-height: 1.75;
-  }
-  .buttons {
-   margin-top: 3rem;
-   text-align: center;
-     a.button {
-       padding: .2rem 1.5rem;
-       border-radius: 0.1rem;
-       text-decoration: none;
-       color: #529ECC;
-       border: 5px solid #529ECC;
-       font-style: bold;
-       background: transparent;
-     }
-  }
+    .title {
+     font-weight: bold;
+     color: #78594B;
+     font-size: 2.0rem;
+     margin-bottom: 1.25rem;
+     padding-bottom: 1rem;
+     border-bottom: 1.0px solid rgba(82,158,204, 0.2);
+     text-align: center;
+    }
+    p {
+     font-size: 1.0rem;
+     line-height: 1.75;
+    }
+    .buttons {
+     margin-top: 3rem;
+     text-align: center;
+       a.button {
+         padding: .2rem 1.5rem;
+         border-radius: 0.1rem;
+         text-decoration: none;
+         color: #529ECC;
+         border: 5px solid #529ECC;
+         font-weight: bold;
+         background: transparent;
+       }
+    }
 }

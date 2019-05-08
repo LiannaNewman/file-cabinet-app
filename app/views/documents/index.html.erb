@@ -1,9 +1,20 @@
-<h1> These are all my documents? </h1>
-
-  <% @documents.each do |document|%>
-    <h2> <%= link_to document.title, document %> </h2>
-    <p> <%= time_ago_in_words(document.created_at)%> </p>
-    <p> <%= truncate(document.content, length: 20)%></p>
-  <% end %>
-
-<h3> <%= link_to "Create New Document", new_document_path %> </h3>
+<div class="wrapper_with_padding">
+  <div id="docs">
+    <div class="clearfix">
+      <% unless @documents.blank? %>
+        <% @documents.each do |document|%>
+        <span class="doc">
+          <a class="" href= <%= url_for(document) %>>
+            <p class="title"> <%= document.title %> </p>
+            <p class="date"> <%= time_ago_in_words(document.created_at)%> </p>
+            <p class="content"> <%= truncate(document.content, length: 20)%></p>
+          </a>
+        </span>
+        <% end %>
+        <% else  %>
+        <h2>Create Documents</h2>
+        <p>Start creating documents and organize your Horcruxes</p>
+      <% end %>
+    </div>
+  </div>
+</div>
